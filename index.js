@@ -95,7 +95,7 @@ const urls = [
   'https://www.freeproxy.world/?type=&anonymity=&country=&speed=&port=&page=10',
   'https://api.proxyscrape.com/?request=displayproxies&proxytype=http',
   'https://api.good-proxies.ru/getfree.php?count=1000&key=freeproxy',
-  'https://api.proxyscrape.com/v2/?request=getproxies&protocol=http&timeout=10000&country=all&ssl=all&anonymity=all'
+  'https://api.proxyscrape.com/v2/?request=getproxies&protocol=http&timeout=10000&country=all&ssl=all&anonymity=all',
 ];
 
 async function scrapeProxies(chatId) {
@@ -118,7 +118,7 @@ async function scrapeProxies(chatId) {
     } catch (error) {
       console.error(`Error scraping ${urls[i]}:`, error);
     }
-    const progress = Math.round(((i + 1) / totalUrls) * 100);
+    const progress = Math.round(((i + 1) / totalUrls) * 600);
     await bot.editMessageText(`Memulai Scraper\n{ ${progress}% }`, {
       chat_id: chatId,
       message_id: progressMessage.message_id

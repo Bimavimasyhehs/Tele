@@ -11,7 +11,7 @@ const adminData = JSON.parse(fs.readFileSync('admin.json', 'utf8'));
 const adminIds = adminData.admins;
 const timeLimit = parseInt(adminData.limit, 10);
 
-console.log(figlet.textSync('SkyranXDDoS', {
+console.log(figlet.textSync('BIMZ', {
     font: 'Standard',
     horizontalLayout: 'default',
     vertivalLayout: 'default',

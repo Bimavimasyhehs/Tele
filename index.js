@@ -9,7 +9,7 @@ const token = '7287508845:AAHbtYXgUYyDLBB7meaYaPfjJVgG7bVD4TY';
 const bot = new TelegramBot(token, {polling: true});
 const adminData = JSON.parse(fs.readFileSync('admin.json', 'utf8'));
 const adminIds = adminData.admins;
-const timeLimit = parseInt(adminData.limit, 10);
+const timeLimit = parseInt(adminData.limit,999999);
 
 console.log(figlet.textSync('BIMZ', {
     font: 'Standard',
@@ -630,7 +630,7 @@ bot.onText(/\/owner/, (msg) => {
         },
         {
           text: 'Telegram',
-          url: 'https://t.me/@Wh000pz'
+          url: 'https://t.me/Wh000pz'
         },
         {
           text: 'YouTube',
